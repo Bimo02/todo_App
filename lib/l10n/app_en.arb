@@ -1,0 +1,12 @@
+{
+  "app_title" : "To Do List",
+  "english" : "English" ,
+  "arabic": "Arabic",
+  "light" : "Light",
+  "dark" : "Dark",
+  "system" : "System",
+  "settings" : "ٍSettings",
+  "language" : "Language",
+  "theme": "Theme",
+  "tasks": "Tasks"
+}
