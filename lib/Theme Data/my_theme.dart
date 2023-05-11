@@ -65,13 +65,23 @@ class MyThemeData {
         headline4: GoogleFonts.roboto(
             color: MyThemeData.blacklight,
             fontWeight: FontWeight.bold,
-            fontSize: 14),
+            fontSize: 15),
+        headline5: GoogleFonts.roboto(
+            color: MyThemeData.lightprimlow,
+            fontWeight: FontWeight.bold,
+            fontSize: 15),
+        headline6: GoogleFonts.roboto(
+            color: Colors.white,
+            fontWeight: FontWeight.bold,
+            fontSize: 17),
       ));
   static ThemeData darktheme = ThemeData(
-      primaryColor: darksec,
+      primaryColor: darkprim,
+      primaryColorLight: darksec,
       hoverColor: darksec,
       backgroundColor: darksec,
-      dividerColor: darkprim,
+      dividerColor: darksec,
+      highlightColor: blacklight,
       iconTheme: IconThemeData(color: darkprim),
       iconButtonTheme: IconButtonThemeData(
           style: ButtonStyle(
@@ -83,30 +93,50 @@ class MyThemeData {
           backgroundColor: darksec,
           iconTheme: IconThemeData(color: colorblack)),
       bottomNavigationBarTheme: BottomNavigationBarThemeData(
+        elevation: 0,
           backgroundColor: blacklight,
           selectedItemColor: darksec,
           unselectedItemColor: colorwihte),
       floatingActionButtonTheme: FloatingActionButtonThemeData(
-          backgroundColor: darkprim,
+        elevation: 0,
+          backgroundColor: darksec,
           shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(50),
-              side: BorderSide(color: Colors.white, width: 4))),
+              side: BorderSide(color: blacklight, width: 4))),
       textTheme: TextTheme(
-        headline1: TextStyle(
-            color: MyThemeData.colorwihte,
+        headline1: GoogleFonts.poppins(
+            color: MyThemeData.blacklight,
             fontWeight: FontWeight.bold,
-            fontSize: 30),
-        headline2: TextStyle(
-            color: MyThemeData.colorwihte,
-            fontWeight: FontWeight.w400,
-            fontSize: 25),
-        subtitle1: TextStyle(
-            color: MyThemeData.colorwihte,
-            fontWeight: FontWeight.w500,
-            fontSize: 25),
-        headline3: TextStyle(
-            color: MyThemeData.colorwihte,
+            fontSize: 22),
+        headline2: GoogleFonts.poppins(
+            color: Colors.white,
+            fontWeight: FontWeight.bold,
+            fontSize: 14),
+        subtitle1: GoogleFonts.roboto(
+            color: Colors.white,
+            fontWeight: FontWeight.bold,
+            fontSize: 18),
+        subtitle2: GoogleFonts.roboto(
+            color:  Colors.white,
             fontWeight: FontWeight.bold,
             fontSize: 20),
+        labelMedium: GoogleFonts.roboto(
+            color: lightprimlow, fontWeight: FontWeight.bold, fontSize: 14),
+        headline3: GoogleFonts.poppins(
+            color: MyThemeData.lightprimlow,
+            fontWeight: FontWeight.bold,
+            fontSize: 18),
+        headline4: GoogleFonts.roboto(
+            color: Colors.white,
+            fontWeight: FontWeight.bold,
+            fontSize: 15),
+        headline5: GoogleFonts.roboto(
+            color: Colors.white,
+            fontWeight: FontWeight.bold,
+            fontSize: 15),
+        headline6: GoogleFonts.roboto(
+            color: Colors.white,
+            fontWeight: FontWeight.bold,
+            fontSize: 17),
       ));
 }

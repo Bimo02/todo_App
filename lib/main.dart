@@ -1,5 +1,8 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:islamiapp/Home/TasksTab/editscreen.dart';
 import 'package:islamiapp/providers/app_config_provider.dart';
 import 'package:islamiapp/providers/themeProvider.dart';
 import 'package:provider/provider.dart';
@@ -10,6 +13,10 @@ import 'Theme Data/my_theme.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
+  FirebaseFirestore.instance.settings =
+      Settings(cacheSizeBytes: Settings.CACHE_SIZE_UNLIMITED);
+  await FirebaseFirestore.instance.disableNetwork();
   SharedPreferences sharedPreferences = await SharedPreferences.getInstance();
   final isDark =sharedPreferences.getBool('is_dark') ?? false;
   final isLanguage = sharedPreferences.getString('Ar')??'';
@@ -31,6 +38,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       routes: {
         HomeScreen.routeName: (context) => HomeScreen(),
+        EditScreen.routeName: (context)=> EditScreen(),
       },
       initialRoute: HomeScreen.routeName,
       theme: MyThemeData.lightTheme,

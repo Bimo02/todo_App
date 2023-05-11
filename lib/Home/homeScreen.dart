@@ -50,6 +50,7 @@ class _HomeScreenState extends State<HomeScreen> {
         ),
       ),
       floatingActionButton: FloatingActionButton(
+        backgroundColor:Color(0xFF5D9CEC) ,
         onPressed: (){
           showaddbottomSheet();
         },
